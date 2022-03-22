@@ -1,0 +1,61 @@
+<div class="topnav">
+  <ul >
+
+  <li><a href=""  style=" font-weight: bold; font-size: large;">Your Sold-History</a></li>
+
+  </ul>
+</div>
+
+    <div class="row">
+      <div class="main">
+        <div class="card">
+
+          <form >
+
+
+
+
+            <div class="card">
+              <!-- <h4 style="text-align: left;"><u> Fill below details to continue placing request</u></h4> -->
+              <table class="table ">
+                <thead style="width: fit-content;">
+                  <tr>
+
+                    <th scope="col">Date</th>
+                    <th scope="col">Crop Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">MSP</th>
+                    <th scope="col">Sold Price</th>
+                    <th scope="col">Total Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <tr *ngFor="let data of soldData">
+                    <td>
+                      {{data.date}}
+                    </td>
+                    {{data.sellRequest.cropName}}
+                    <td>
+                        {{data.sellRequest.quantity}}
+                    </td>
+                    <td>{{data.msp}}</td>
+                    <td>{{data.soldPrice}}</td>
+                    <td>{{data.totalPrice}}</td>
+                 </tr>
+                </tbody>
+              </table>
+
+               </div>
+               <div >
+                <p>Click <a [routerLink]="['/farmer-welcome']" routerLinkActive="router-link-active" > here </a>to go back</p>
+
+              </div>
+
+
+
+
+
+            </form>
+        </div>
+      </div>
+    </div>

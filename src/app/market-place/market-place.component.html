@@ -1,0 +1,59 @@
+<div class="topnav">
+  <ul >
+
+  <li><a href=""  style=" font-weight: bold; font-size: large;">Market Place</a></li>
+
+  </ul>
+</div>
+
+    <div class="row">
+      <div class="main">
+        <div class="card">
+
+          <form >
+            <h4 style="text-align: left;"><u> Your Listings</u></h4>
+            <div class="card" *ngFor="let bidding of FarmerBidding">
+
+
+              <div class="card" style="padding-right: 700px;">
+              <table>
+
+                <tr>
+                  <td>Crop Type</td>
+                  <td>{{bidding.sellRequest.cropType}} </td>
+                </tr>
+                <tr>
+                  <td>Crop Name</td>
+                  <td> {{bidding.sellRequest.cropName}}</td>
+                </tr>
+                <tr>
+                  <td>Base Price</td>
+                  <td> {{bidding.sellRequest.basePrice}}</td>
+                </tr>
+
+                </table>
+              </div>
+              <div class="car">
+                <table style="float: left; ">
+
+                  <tr>
+                    <td style="font-weight:bold;"> <u> Current Bid</u></td>
+                    <td>{{bidding.currentBid}} </td>
+                  </tr>
+                  <tr>
+
+
+                  </table>
+
+              </div>
+
+            </div>
+
+         </form>
+        </div>
+        <div >
+          <p>Click <a [routerLink]="['/farmer-welcome']" routerLinkActive="router-link-active" > here </a>to go back</p>
+
+        </div>
+      </div>
+    </div>

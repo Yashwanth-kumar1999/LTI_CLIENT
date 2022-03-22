@@ -1,0 +1,52 @@
+
+<div>
+  <div class="topnav">
+    <ul >
+
+    <li><a href="login.html"  style=" font-weight: bold; font-size: large;">Login </a></li>
+
+    </ul>
+  </div>
+
+      <div class="row">
+        <div class="main">
+          <div class="card">
+
+            <form   (ngSubmit)="userLogin()">
+                <div class="container">
+                  <table>
+                    <tr>
+                        <td>Enter Your Email</td><td><input type="email" placeholder ="abc@example.com"  [(ngModel)]="login.email" name="email" /> </td>
+                      </tr>
+                   <tr>
+                     <td>Enter Your Password</td>
+                     <td> <input type="password" placeholder="password" [(ngModel)]="login.password" name="password"/></td>
+                   </tr>
+                   <tr>
+                    <td></td>
+                    <td style="text-align: right"> <a href="">Forgot Password?</a></td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td > <button type="submit" class="btn">Login</button></td>
+                  </tr>
+                    </table>
+                </div>
+               <div style="text-align: center;">
+                 <p>New User? Register Below</p>
+                 <p>Are you <a  [routerLink]="['/register/farmer']" routerLinkActive="router-link-active" >Farmer </a>or <a [routerLink]="['/register/bidder']" routerLinkActive="router-link-active" er >Bidder</a></p>
+                  <router-outlet></router-outlet>
+               </div>
+               <div >
+                <p>Click <a [routerLink]="['/home']" routerLinkActive="router-link-active" > here </a>to go back</p>
+
+              </div>
+
+
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+

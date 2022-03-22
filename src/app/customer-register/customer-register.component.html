@@ -1,0 +1,134 @@
+
+<body>
+  <div class="topnav">
+    <ul >
+
+    <li><a  style=" font-weight: bold; font-size: large;">Farmer Registration</a></li>
+
+    </ul>
+  </div>
+
+      <div class="row">
+        <div class="main">
+          <div class="card">
+
+            <form (ngSubmit)="processRegistration()" >
+
+                <div class="container">
+                  <h3 style="text-align: left;"><u> Personal Details</u></h3>
+                  <table>
+                    <tr >
+                      <td>Full Name</td>
+                      <td><input type="text"  [(ngModel)]="customer.name" name="name" /> </td>
+                    </tr>
+                    <tr>
+                      <td>Contact No.</td>
+                      <td><input type="number"  [(ngModel)]="customer.contact_no" name="contact_no" /> </td>
+                    </tr>
+                    <tr>
+                        <td> E-mail id</td>
+                        <td><input type="email" placeholder ="abc@example.com" [(ngModel)]="customer.email" name="email" /> </td>
+                      </tr>
+
+                      <tr >
+                        <td>User Type</td>
+                        <td><input type="text"  value="farmer" [(ngModel)]="customer.userType" name="userType"  placeholder="farmer"  /> </td>
+                      </tr>
+
+                    </table>
+
+
+                </div>
+
+                <div class="container">
+                <h3 style="text-align: left;"><u>Address Details</u> </h3>
+
+                  <p>Address Line</p>
+                  <textarea rows ="4" cols="20" [(ngModel)]="customer.address" name="address" ></textarea>
+
+                </div>
+                 <div class="container" >
+                <table>
+                  <tr>
+                    <td>City</td>
+                    <td><input type="text" [(ngModel)]="customer.city" name="city"/> </td>
+                  </tr>
+                  <tr>
+                    <td>State</td>
+                    <td><input type="text" [(ngModel)]="customer.state" name="state" /> </td>
+                  </tr>
+                  <tr>
+                    <td>Pin code</td>
+                    <td><input type="number"[(ngModel)]="customer.pin_code" name="pin_code" /> </td>
+                  </tr>
+                </table>
+              </div>
+
+
+
+              <div class="container">
+                <h3 style="text-align: left;"><u> Bank Details</u></h3>
+                <table>
+                  <tr>
+                    <td>Account No.</td>
+                    <td><input type="number" [(ngModel)]="customer.account_no" name="account_no"/> </td>
+                  </tr>
+                  <tr>
+                    <td>IFSC Code</td>
+                    <td><input type="text" [(ngModel)]="customer.IFSC_code" name="IFSC_code" /> </td>
+                  </tr>
+                  </table>
+              </div>
+
+                <div class="container">
+                <h3 style="text-align: left;"><u> Document details</u> </h3>
+                <table>
+
+                  <tr>
+                    <td><label for="myfile1">PAN_NO:</label></td>
+                    <td><input type="number" id="myfile1"  [(ngModel)]="customer.pan_no" name="pan_no"> </td>
+                  </tr>
+                  <tr>
+                    <td><label for="myfile2">License No:</label></td>
+                    <td><input type="number" id="myfile2" [(ngModel)]="customer.license_no" name="license_no"> </td>
+                  </tr>
+                  <br>
+                  <br>
+                  <tr>
+                    <td>Enter Your Password</td>
+                    <td> <input type="password" [(ngModel)]="customer.password" placeholder="password" name="password"/></td>
+                  </tr>
+                  <tr>
+                    <td>Confirm Your Password</td>
+                    <td> <input type="text" placeholder="confirm password"/></td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <td><button type="submit" value="Register" class="btn">Register</button></td>
+                    <td > <button type="reset"  value=clear class="button"> Reset</button></td>
+                  </tr>
+
+                </table>
+
+                 </div>
+
+
+
+                 <div >
+                  <p>Click <a [routerLink]="['/login']" routerLinkActive="router-link-active"  > here </a>to go back</p>
+
+                </div>
+
+
+              </form>
+          </div>
+        </div>
+      </div>
+</body>
+

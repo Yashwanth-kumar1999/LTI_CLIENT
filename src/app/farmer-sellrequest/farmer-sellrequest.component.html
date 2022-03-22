@@ -1,0 +1,75 @@
+<div class="topnav">
+  <ul >
+
+  <li><a href=""  style=" font-weight: bold; font-size: large;">Request Area</a></li>
+
+  </ul>
+</div>
+
+    <div class="row">
+      <div class="main">
+        <div class="card">
+
+          <form (ngSubmit)="processRegistration1()" >
+            <div class="container">
+              <h4 style="text-align: left;"><u> Fill below details to continue placing request</u></h4>
+              <table>
+
+                <tr>
+                  <td>Crop Type</td>
+                  <td><input type="text" [(ngModel)]="sellrequest.cropType" name="cropType"/> </td>
+                </tr>
+                <tr>
+                  <td>Crop Name</td>
+                  <td><input type="text" [(ngModel)]="sellrequest.cropName" name="cropName"/> </td>
+                </tr>
+                <tr>
+                  <td>Fertilizer Type</td>
+                  <td><input type="text" [(ngModel)]="sellrequest.fertilizerType" name="fertilizerType"/> </td>
+                </tr>
+                <tr>
+                  <td>quantity</td>
+                  <td><input type="number" [(ngModel)]="sellrequest.quantity" name="quantity"/> </td>
+                </tr>
+                <tr>
+                  <td>Soil pH certificate No.</td>
+                  <td><input type="number" [(ngModel)]="sellrequest.soilCertNo" name="soilCertNo"/> </td>
+                </tr>
+                <tr>
+                  <td>Status</td>
+                  <td><input type="text" [(ngModel)]="sellrequest.status" name="status"/> </td>
+                </tr>
+                <tr>
+                  <td>Duration</td>
+                  <td><input type="text" placeholder=" Enter days" [(ngModel)]="sellrequest.duration" name="duration"/> </td>
+                </tr>
+                <tr>
+                  <td>Start Date</td>
+                  <td><input type="date" [(ngModel)]="sellrequest.startDate" name="startDate" /> </td>
+                </tr>
+                <tr>
+                  <td>End Date</td>
+                  <td><input type="date" [(ngModel)]="sellrequest.endDate" name="endDate"/> </td>
+                </tr>
+
+                <tr>
+                  <td><button type="submit" value="place Request" class="btn">Place Request</button></td>
+                </tr>
+                </table>
+
+
+               </div>
+               <div >
+                <p>Click <a [routerLink]="['/farmer-welcome']" routerLinkActive="router-link-active" > here </a>to go back</p>
+
+              </div>
+
+
+
+
+
+
+            </form>
+        </div>
+      </div>
+    </div>

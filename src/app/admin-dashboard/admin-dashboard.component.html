@@ -1,0 +1,136 @@
+<div class="topnav">
+  <ul >
+
+
+
+  <li><a href="" style=" font-weight: bold; font-size: large;">Welcome Admin!</a></li>
+  <li style="float: right; padding-right: 10px;">
+  <button type="button" class="button" style="float: right; padding-right: 20px; height:50px" [routerLink]="['/login']" routerLinkActive="router-link-active" >LogOut </button>
+  </li>
+
+
+
+  </ul>
+  </div>
+
+
+
+  <div class="row">
+  <div class="main">
+  <div class="card">
+
+
+
+  <form>
+  <h4 style="text-align: left;"><u><b>Sell Requests</b></u></h4>
+  <div class="card">
+
+
+
+  <table class="table ">
+  <thead>
+  <tr>
+    <td> <u> <b>Select sellRequest</b></u></td>
+  <td> <u> <b> Farmer Id</b></u></td>
+  <td > <u> <b> Sell Request ID</b></u></td>
+  <td > <u> <b> Crop Type</b></u></td>
+  <td > <u> <b> Crop Name</b></u></td>
+  <td > <u> <b> Base Price</b></u></td>
+  <td ></td>
+  <td ></td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr  *ngFor="let req of allData">
+    <td>
+      <input
+        type="radio"
+
+        value="{{ req.id }}"
+        name="selectCrop"
+        (change)="getValue($event)"
+      />
+    </td>
+  <td>{{req.farmer.farmer_id}}</td>
+  <td >{{req.id}}</td>
+  <td >{{req.cropType}}</td>
+  <td >{{req.cropName}}</td>
+  <td >{{req.basePrice}}</td>
+
+  <td > <button type="button" (click)="approveRequest()" class="btn">Approve </button></td>
+  <td > <button type="button" class="button">Reject </button></td>
+  </tr>
+  <!-- <tr>
+  <td></td>
+  <td ></td>
+  <td ></td>
+  <td ></td>
+  <td > <button type="button" class="btn">Approve </button></td>
+  <td > <button type="button" class="button">Reject </button></td>
+  </tr> -->
+  <!-- <tr>
+  <td></td>
+  <td ></td>
+  <td ></td>
+  <td ></td>
+  <td > <button type="button" class="btn">Approve </button></td>
+  <td > <button type="button" class="button">Reject </button></td>
+  </tr> -->
+  </tbody>
+
+
+
+  </table>
+  </div>
+  <br>
+  <br>
+
+
+
+  <h4 style="text-align: left;"><u><b>Bid Requests</b></u></h4>
+  <div class="card">
+
+
+
+  <table class="table ">
+  <thead>
+  <tr>
+  <td> <u> <b> select Bidding</b></u></td>
+
+  <td> <u> <b> Bidding ID</b></u></td>
+  <td > <u> <b> Crop Name</b></u></td>
+  <td > <u> <b> Farmer ID</b></u></td>
+  <td > <u> <b> Current bid </b></u></td>
+  <td ></td>
+  <td ></td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let bid of biddingData">
+    <td>
+      <input
+        type="radio"
+
+        value="{{ bid.sellRequest.id}}"
+        name="selectCrop"
+        (change)="getValue2($event)"
+      />
+    </td>
+  <td>{{bid.bidId}}  </td>
+  <td >{{bid.sellRequest.cropName}}</td>
+  <td >{{bid.sellRequest.farmer.farmer_id}}</td>
+  <td >{{bid.currentBid}}</td>
+  <td > <button type="button"  (click)="approveBidding(bid.currentBid)"  class="btn">Approve </button></td>
+  <td > <button type="button" class="button">Reject </button></td>
+  </tr>
+
+  </tbody>
+
+
+
+  </table>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>

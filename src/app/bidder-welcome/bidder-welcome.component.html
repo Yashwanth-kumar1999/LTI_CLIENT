@@ -1,0 +1,57 @@
+
+<div class="container-sm mt-3">
+  <div class="topnav">
+    <ul >
+
+    <li><a href=""  style=" font-weight: bold; font-size: large;">Welcome Bidder!</a></li>
+    <li style="float: right; padding-right: 10px;">
+      <button type="button" class="button"  style="float: right; padding-right: 20px; height:50px" [routerLink]="['/login']" routerLinkActive="router-link-active" >LogOut </button>
+    </li>
+
+    </ul>
+  </div>
+  <div class="row">
+    <div class="main">
+      <div class="card">
+
+  <table class="table mt-5 text-center">
+    <thead>
+      <tr>
+        <th>select crop</th>
+        <th scope="col">Crop type</th>
+        <th scope="col">Crop Name</th>
+        <th scope="col">Base price</th>
+        <th scope="col">Current bid</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bidding of biddingDetails">
+        <td>
+          <input
+            type="radio"
+
+            value="{{ bidding.bidId }}"
+            name="selectCrop"
+            (change)="getValue($event)"
+          />
+        </td>
+        <td>{{ bidding.sellRequest.cropType }}</td>
+        <td>{{ bidding.sellRequest.cropName }}</td>
+        <td>{{ bidding.sellRequest.basePrice }}</td>
+        <td>{{ bidding.currentBid }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row">
+    <div class="col text-center mt-5 fs-5">
+      <label for="amount">Bid amount:</label>
+      <input type="number" [(ngModel)]="amount" id="amount" /> <br />
+      <br />
+      <button type="button" class="btn" (click)="setBid()">confirm</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>

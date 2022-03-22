@@ -1,0 +1,47 @@
+
+  <div class="topnav">
+    <ul >
+
+    <li><a href=""  style=" font-weight: bold; font-size: large;">Welcome Customer!</a></li>
+    <li style="float: right; padding-right: 10px;">
+      <button type="button" class="button"  style="float: right; padding-right: 20px; height:50px" [routerLink]="['/login']" routerLinkActive="router-link-active" >LogOut </button>
+    </li>
+
+    </ul>
+  </div>
+
+      <div class="row">
+        <div class="main">
+          <div class="card">
+
+            <form >
+
+                <div class="container">
+
+                  <table >
+                    <tr>
+                      <td></td>
+                      <td >
+
+                      <p class="farmer_id"> Your farmer ID is {{farmerId.farmer_id}}</p>
+                      </td>
+                    </tr>
+                  <tr>
+                    <td></td>
+                    <td > <button  [routerLink]="['/farmer-sellrequest']" routerLinkActive="router-link-active"  type="button" class="btn"  style="text-align: center;">Place SellRequest </button></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td > <button [routerLink]="['/farmer-soldHistory']" routerLinkActive="router-link-active"  type="button" class="btn"  style="text-align: center;">View Sold Crop History </button></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td > <button type="button" [routerLink]="['/farmer-marketplace']" routerLinkActive="router-link-active"   class="btn"  style="text-align: center;">View Market Place</button></td>
+                  </tr>
+                </table>
+                 </div>
+              </form>
+          </div>
+        </div>
+      </div>
+
