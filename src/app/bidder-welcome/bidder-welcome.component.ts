@@ -53,9 +53,14 @@ this.radioValue=event.target.value
         // console.log("bid"+ JSON.stringify( this.biddingDetails))
         // console.log("amount"+ this.amount)
       // if(this.amount>this.biddingDetails.currentBid){
-        this.http.post(`http://localhost:8083/updateApi/${this.radioValue}/${y.bidder_id}/${this.amount }`,null).subscribe(res=>console.log(res))
+        this.http.post(`http://localhost:8083/updateApi/${this.radioValue}/${y.bidder_id}/${this.amount }`,null).subscribe(res=>{console.log(res)
 
-      // }
+        alert("Your bid has been sent for approval")
+
+    })
+
+
+
 
 
 

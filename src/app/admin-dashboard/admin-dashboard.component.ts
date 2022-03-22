@@ -47,6 +47,12 @@ console.log(typeof(x))
   alert("sell request has been approved")
 }
   )
+
+  this.http.post(`http://localhost:8083/updateSellApi/${x}`,null).subscribe(res=>{console.log(res)
+    alert("status changed")
+}
+  )
+
 }
 
 
@@ -55,7 +61,7 @@ this.radioValue2= event.target.value
 console.log(this.radioValue2)
 
 }
-approveBidding(bid:any){
+approveBidding(bid:any,bidId:any){
 
   let y= Number(this.radioValue2)
   console.log(y)
@@ -65,6 +71,14 @@ approveBidding(bid:any){
   alert("Bidding request has been approved")
 }
   )
+
+
+let BIDID=bidId
+  this.http.post(`http://localhost:8083/updateBiddingRequest/${BIDID}`,null).subscribe(res=>{console.log(res)
+  alert("status has been changed to approved")
+}
+  )
+
 
 
 }
