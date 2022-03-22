@@ -34,7 +34,7 @@ const routes: Routes = [
   {path:'admin',component:AdminDashboardComponent},
   {path: 'home',component:HomeComponent},
   {path:'farmer-welcome',component:FarmerWelcomeComponent}
-
+// surendra
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

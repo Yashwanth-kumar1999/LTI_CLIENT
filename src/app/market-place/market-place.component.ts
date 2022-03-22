@@ -21,7 +21,9 @@ export class MarketPlaceComponent implements OnInit {
          y=JSON.parse(this.x);
       }
 
-     this.http.get(`http://localhost:8083/getFarmerBIdding/${y}`).subscribe(
+      console.log(y)
+      let farmer_id=y.farmer_id
+     this.http.get(`http://localhost:8083/getFarmerBIdding/${farmer_id}`).subscribe(
       res=>this.FarmerBidding=res
     )
   }

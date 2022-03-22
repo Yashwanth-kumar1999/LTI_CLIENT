@@ -22,8 +22,8 @@ getAllSoldHistory(){
       if(this.x!=null){
          y=JSON.parse(this.x);
       }
-
-return this.http.get(`http://localhost:8083/getAllFarmerSoldHistory/${y}`);
+let farmer_id=y.farmer_id
+return this.http.get(`http://localhost:8083/getAllFarmerSoldHistory/${farmer_id}`);
 
 
 }
