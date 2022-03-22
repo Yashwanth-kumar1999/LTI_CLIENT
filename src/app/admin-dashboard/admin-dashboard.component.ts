@@ -52,6 +52,7 @@ console.log(typeof(x))
 
 getValue2(event:any){
 this.radioValue2= event.target.value
+console.log(this.radioValue2)
 
 }
 approveBidding(bid:any){
@@ -60,7 +61,7 @@ approveBidding(bid:any){
   console.log(y)
     let current_bid=bid
     console.log(current_bid)
-  this.http.post(`http://localhost:8083/approveSellRequest/${y}/${current_bid}`,null).subscribe(res=>{console.log(res)
+  this.http.post(`http://localhost:8083/approveBid/${y}/${current_bid}`,null).subscribe(res=>{console.log(res)
   alert("Bidding request has been approved")
 }
   )
