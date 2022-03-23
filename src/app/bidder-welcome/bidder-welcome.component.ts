@@ -41,11 +41,12 @@ this.radioValue=event.target.value
   setBid(){
    let x:any=sessionStorage.getItem('id')
       // console.log(this.amount)
-
+console.log(x)
       let y;
       if(x!=null){
          y=JSON.parse(x);
       }
+      console.log(y)
         console.log(this.amount)
         console.log(this.radioValue)
         console.log(y.bidder_id)
